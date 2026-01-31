@@ -1,10 +1,8 @@
 <script setup lang="ts">
-import { AlertCircle } from 'lucide-vue-next'
 import { toast } from 'vue-sonner'
 import { z } from 'zod'
 
 const { t } = useI18n()
-const { previewMode } = useRuntimeConfig().public
 
 const token = ref('')
 const error = ref('')
@@ -64,15 +62,6 @@ async function handleSubmit() {
             <FieldError v-if="error" :errors="[error]" />
           </Field>
         </FieldGroup>
-
-        <Alert v-if="previewMode">
-          <AlertCircle class="h-4 w-4" />
-          <AlertTitle>{{ $t('login.tips') }}</AlertTitle>
-          <AlertDescription>
-            {{ $t('login.preview_token') }}
-            <code class="font-mono text-green-500">SinkCool</code>
-          </AlertDescription>
-        </Alert>
 
         <Button class="w-full" type="submit">
           {{ $t('login.submit') }}

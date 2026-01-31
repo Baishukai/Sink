@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const { stats } = useGithubStats()
+import { Gift, Shield, Zap } from 'lucide-vue-next'
 </script>
 
 <template>
@@ -28,44 +28,62 @@ const { stats } = useGithubStats()
 
       <div
         class="
-          grid gap-0 divide-y
-          md:grid-cols-2 md:gap-2 md:divide-x md:divide-y-0
+          grid gap-6
+          md:grid-cols-3 md:gap-8
         "
       >
         <div
-          class="
-            space-y-4 pb-6 text-center
-            md:pb-0
-          "
+          class="flex flex-col items-center space-y-4 text-center"
         >
-          <ClientOnly>
-            <template #fallback>
-              <Skeleton class="mx-auto h-12 w-24" />
-            </template>
-            <div class="text-5xl font-bold tabular-nums">
-              {{ stats.stars }}
-            </div>
-          </ClientOnly>
+          <div
+            class="
+              flex size-12 items-center justify-center rounded-full
+              bg-primary/10
+            "
+          >
+            <Zap class="size-6 text-primary" />
+          </div>
+          <div class="text-2xl font-bold">
+            {{ $t('home.features.fast') }}
+          </div>
           <p class="text-muted-foreground">
-            {{ $t('home.stats.stars') }}
+            {{ $t('home.features.fast_desc') }}
           </p>
         </div>
         <div
-          class="
-            space-y-4 pt-6 text-center
-            md:pt-0
-          "
+          class="flex flex-col items-center space-y-4 text-center"
         >
-          <ClientOnly>
-            <template #fallback>
-              <Skeleton class="mx-auto h-12 w-24" />
-            </template>
-            <div class="text-5xl font-bold tabular-nums">
-              {{ stats.forks }}
-            </div>
-          </ClientOnly>
+          <div
+            class="
+              flex size-12 items-center justify-center rounded-full
+              bg-primary/10
+            "
+          >
+            <Shield class="size-6 text-primary" />
+          </div>
+          <div class="text-2xl font-bold">
+            {{ $t('home.features.secure') }}
+          </div>
           <p class="text-muted-foreground">
-            {{ $t('home.stats.forks') }}
+            {{ $t('home.features.secure_desc') }}
+          </p>
+        </div>
+        <div
+          class="flex flex-col items-center space-y-4 text-center"
+        >
+          <div
+            class="
+              flex size-12 items-center justify-center rounded-full
+              bg-primary/10
+            "
+          >
+            <Gift class="size-6 text-primary" />
+          </div>
+          <div class="text-2xl font-bold">
+            {{ $t('home.features.free') }}
+          </div>
+          <p class="text-muted-foreground">
+            {{ $t('home.features.free_desc') }}
           </p>
         </div>
       </div>

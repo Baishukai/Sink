@@ -71,36 +71,42 @@
     },
     "features": {
       "title": "功能特点",
-      "subtitle": "简单而实用的功能",
+      "subtitle": "让链接管理更简单高效",
+      "fast": "极速响应",
+      "fast_desc": "全球加速网络，各地用户访问无障碍",
+      "secure": "安全可靠",
+      "secure_desc": "企业级安全防护，数据加密传输",
+      "free": "完全私有化",
+      "free_desc": "100% 私有化部署，打造您的智囊团",
       "url_shortening": {
-        "title": "URL 缩短",
-        "description": "将您的 URL 压缩到最小长度"
+        "title": "链接缩短",
+        "description": "将冗长的链接转换为简短易记的短链接"
       },
       "analytics": {
-        "title": "数据分析",
-        "description": "监控链接分析并收集有价值的统计数据"
+        "title": "数据统计",
+        "description": "实时追踪链接点击量、访客来源等关键数据"
       },
       "serverless": {
-        "title": "无服务器",
-        "description": "无需传统服务器即可部署"
+        "title": "稳定可靠",
+        "description": "7×24小时稳定运行，保障业务连续性"
       },
       "customizable_slug": {
         "title": "自定义短链",
-        "description": "支持个性化短链和大小写敏感"
+        "description": "支持自定义链接后缀，打造专属品牌链接"
       },
       "ai_slug": {
-        "title": "AI 短链",
-        "description": "利用 AI 生成短链"
+        "title": "智能生成",
+        "description": "AI 智能生成易记的短链接后缀"
       },
       "link_expiration": {
-        "title": "链接过期",
-        "description": "为您的链接设置过期日期"
+        "title": "有效期设置",
+        "description": "灵活设置链接过期时间，适合限时活动"
       }
     },
     "cta": {
-      "title": "立即部署",
-      "description": "只需几个简单的点击，您就可以免费开始部署",
-      "button": "开始部署"
+      "title": "开始使用",
+      "description": "立即创建您的第一个短链接",
+      "button": "进入控制台"
     },
     "logos": {
       "title": "使用优秀的技术构建"
@@ -109,8 +115,8 @@
       "follow": "在 X(Twitter) 上关注我"
     },
     "stats": {
-      "title": "Sink 数据",
-      "subtitle": "受到全球开发者的信赖",
+      "title": "为什么选择我们",
+      "subtitle": "专业的短链接管理平台",
       "stars": "GitHub Stars",
       "forks": "Forks"
     },
@@ -120,7 +126,7 @@
     }
   },
   "dashboard": {
-    "title": "仪表盘",
+    "title": "进入控制台",
     "visits": "访问量",
     "views": "浏览量",
     "visitors": "访客数",

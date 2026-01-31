@@ -8,12 +8,6 @@ defineProps<{
   <Breadcrumb>
     <BreadcrumbList>
       <BreadcrumbItem>
-        <span class="text-muted-foreground">
-          {{ $t('dashboard.title') }}
-        </span>
-      </BreadcrumbItem>
-      <BreadcrumbSeparator />
-      <BreadcrumbItem>
         <BreadcrumbPage>{{ title }}</BreadcrumbPage>
       </BreadcrumbItem>
     </BreadcrumbList>

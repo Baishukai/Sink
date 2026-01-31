@@ -71,36 +71,42 @@
     },
     "features": {
       "title": "Features",
-      "subtitle": "Simple and sufficient functionality",
+      "subtitle": "Make link management simple and efficient",
+      "fast": "Lightning Fast",
+      "fast_desc": "Global accelerated network, accessible from anywhere",
+      "secure": "Secure & Reliable",
+      "secure_desc": "Enterprise-grade security with encrypted data transmission",
+      "free": "Fully Private",
+      "free_desc": "100% private deployment, build your own intelligence hub",
       "url_shortening": {
-        "title": "URL Shortening",
-        "description": "Compress your URLs to their minimal length"
+        "title": "Link Shortening",
+        "description": "Convert long URLs into short, memorable links"
       },
       "analytics": {
         "title": "Analytics",
-        "description": "Monitor link analytics and gather insightful statistics"
+        "description": "Track clicks, visitor sources and key metrics in real-time"
       },
       "serverless": {
-        "title": "Serverless",
-        "description": "Deploy without the need for traditional servers"
+        "title": "Always Online",
+        "description": "24/7 stable operation ensuring business continuity"
       },
       "customizable_slug": {
-        "title": "Customizable Slug",
-        "description": "Support for personalized slugs and case sensitivity"
+        "title": "Custom Links",
+        "description": "Create branded links with custom suffixes"
       },
       "ai_slug": {
-        "title": "AI Slug",
-        "description": "Leverage AI to generate slugs"
+        "title": "Smart Generation",
+        "description": "AI-powered memorable link suffix generation"
       },
       "link_expiration": {
-        "title": "Link Expiration",
-        "description": "Set expiration dates for your links"
+        "title": "Expiration Settings",
+        "description": "Set flexible expiration dates for time-limited campaigns"
       }
     },
     "cta": {
-      "title": "Deployment immediately",
-      "description": "With just a few simple clicks, you can start deploying without any expenses",
-      "button": "Start Deploy"
+      "title": "Get Started",
+      "description": "Create your first short link now",
+      "button": "Go to Dashboard"
     },
     "logos": {
       "title": "Built with awesome technologies"
@@ -109,8 +115,8 @@
       "follow": "Follow on X(Twitter)"
     },
     "stats": {
-      "title": "Sink in Numbers",
-      "subtitle": "Trusted by developers around the world",
+      "title": "Why Choose Us",
+      "subtitle": "Professional link management platform",
       "stars": "Stars on GitHub",
       "forks": "Forks"
     },

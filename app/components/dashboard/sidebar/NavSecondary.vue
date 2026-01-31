@@ -1,26 +1,10 @@
 <script setup lang="ts">
 import { Languages, Laptop, Moon, Sun } from 'lucide-vue-next'
-import { GitHubIcon } from 'vue3-simple-icons'
 import { useSidebar } from '@/components/ui/sidebar'
 
-const { github } = useAppConfig()
 const colorMode = useColorMode()
 const { setLocale, locales } = useI18n()
 const { state } = useSidebar()
-
-const repo = github.replace('https://github.com/', '')
-const { data: stars, status } = await useFetch(
-  `https://api.github.com/repos/${repo}`,
-  {
-    transform: (res: { stargazers_count: number }) => res.stargazers_count,
-    getCachedData: (key, nuxtApp) => nuxtApp.payload.data[key] || nuxtApp.static.data[key],
-  },
-)
-const formattedStars = computed(() => {
-  if (!stars.value)
-    return null
-  return stars.value.toLocaleString()
-})
 </script>
 
 <template>
@@ -32,42 +16,9 @@ const formattedStars = computed(() => {
             class="flex w-full p-1.5 pr-0" :class="[
               state === 'collapsed'
                 ? 'flex-col items-center gap-2'
-                : 'items-center justify-between',
+                : 'items-center justify-end',
             ]"
           >
-            <TooltipProvider>
-              <Tooltip :delay-duration="100">
-                <TooltipTrigger as-child>
-                  <a
-                    :href="github"
-                    target="_blank"
-                    :title="$t('sidebar.github')"
-                    class="
-                      flex h-8 items-center justify-center gap-1.5 rounded-md
-                      px-2
-                      hover:bg-sidebar-accent
-                      hover:text-sidebar-accent-foreground
-                    "
-                  >
-                    <GitHubIcon class="size-4" />
-                    <template v-if="state !== 'collapsed'">
-                      <Skeleton v-if="status === 'pending'" class="h-4 w-8" />
-                      <span
-                        v-else-if="formattedStars" class="
-                          text-xs text-muted-foreground tabular-nums
-                        "
-                      >
-                        {{ formattedStars }} {{ $t('sidebar.stars') }}
-                      </span>
-                    </template>
-                  </a>
-                </TooltipTrigger>
-                <TooltipContent :side="state === 'collapsed' ? 'right' : 'top'">
-                  <p>{{ $t('sidebar.github') }}</p>
-                </TooltipContent>
-              </Tooltip>
-            </TooltipProvider>
-
             <div
               class="flex gap-1" :class="[
                 state === 'collapsed' ? 'flex-col items-center' : 'items-center',
